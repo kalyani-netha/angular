@@ -1,0 +1,28 @@
+<p>
+  hello works!
+</p>
+
+<h1> {{name}}</h1>
+<input type="text" name=" " [(ngModel)]="mobile">
+{{mobile}}
+
+<h3>{{colors}}</h3>
+{{car | json}}
+
+<table border=1 class="table">
+<tr>
+<th>languag</th>
+<th>values</th>
+</tr>
+	<tr *ngFor="let data of car">
+	 	<td>{{data.name | uppercase}}</td>
+	 	<td>{{data.version}}
+	 		<div *ngIf="data.version===''"> no data </div>
+	 	</td>
+	</tr>
+</table>
+<div *ngFor="let data of car">
+   {{data.version}}
+   <div *ngIf="data.version===''"> no data </div>
+</div>
+
